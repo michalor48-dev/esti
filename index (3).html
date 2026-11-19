@@ -1,0 +1,1166 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>פינה של אסתי</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FFE4EC'/%3E%3Ctext x='32' y='46' font-size='38' text-anchor='middle' fill='%23FF8FB1'%3E%E2%99%A5%3C/text%3E%3C/svg%3E">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Rubik:wght@500;600;700;800&family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap">
+<style>
+/* ── Design tokens ─────────────────────────────────────────────
+   Concept: soft & sweet — cream paper, big rounded corners, pastel
+   candy palette, rounded friendly type, occasional hearts.
+   Layout: greeting hero with a "from Dad" note, squares grid,
+   daily note card, journal, tools, notebook.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  --bg: #FFF9F6;
+  --bg-2: #FDEFEA;
+  --surface: #FFFFFF;
+  --surface-2: #FDF1EE;
+  --ink: #3C2B33;
+  --ink-2: #7B6470;
+  --ink-3: #AC96A1;
+  --line: #F3E2DE;
+
+  --pink: #FF8FB1;
+  --pink-soft: #FFE4EC;
+  --pink-ink: #C2456E;
+
+  --peach: #FFB27A;
+  --peach-soft: #FFEBDD;
+  --peach-ink: #B45A1E;
+
+  --mint: #7FD8C1;
+  --mint-soft: #DFF6EF;
+  --mint-ink: #177A63;
+
+  --lav: #B4A2F4;
+  --lav-soft: #EDE7FF;
+  --lav-ink: #5640A8;
+
+  --sky: #8CC8F5;
+  --sky-soft: #E2F1FF;
+  --sky-ink: #1F6CA6;
+
+  --butter: #FFE28A;
+  --butter-soft: #FFF6D6;
+  --butter-ink: #9A6B00;
+
+  --night: #3A2A36;
+  --night-2: #4E3846;
+  --night-ink: #FFF7F3;
+  --night-ink-2: #E3C9D2;
+
+  --good: #35A57A;
+  --good-soft: #E1F6EC;
+
+  --shadow: 0 2px 0 rgba(60,43,51,.03), 0 14px 30px -20px rgba(150,90,110,.45);
+
+  --font-display: "M PLUS Rounded 1c", "Rubik", "Heebo", "Segoe UI", sans-serif;
+  --font-body: "Heebo", "Segoe UI", Arial, sans-serif;
+  --font-ui: "Rubik", "Heebo", Arial, sans-serif;
+
+  --r-sm: 14px;
+  --r-md: 22px;
+  --r-lg: 30px;
+  --max: 1080px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1E1720;
+    --bg-2: #251C26;
+    --surface: #292030;
+    --surface-2: #322638;
+    --ink: #FBEFF2;
+    --ink-2: #D5C2CC;
+    --ink-3: #A18E9A;
+    --line: #3E3140;
+
+    --pink: #FF9FBF;
+    --pink-soft: #432333;
+    --pink-ink: #FFC4D7;
+
+    --peach: #FFB98A;
+    --peach-soft: #432A1E;
+    --peach-ink: #FFD3B4;
+
+    --mint: #8FE4CE;
+    --mint-soft: #1B3833;
+    --mint-ink: #BFF3E6;
+
+    --lav: #C3B4FA;
+    --lav-soft: #2E2650;
+    --lav-ink: #DED3FF;
+
+    --sky: #9ED1F7;
+    --sky-soft: #1C3145;
+    --sky-ink: #C9E6FF;
+
+    --butter: #FFE18E;
+    --butter-soft: #3E331A;
+    --butter-ink: #FFEDB8;
+
+    --night: #17111A;
+    --night-2: #241A27;
+    --night-ink: #FFF7F3;
+    --night-ink-2: #D3B8C3;
+
+    --good: #7FE0B7;
+    --good-soft: #17342A;
+
+    --shadow: 0 2px 4px rgba(0,0,0,.35), 0 18px 40px -22px rgba(0,0,0,.9);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1E1720;
+  --bg-2: #251C26;
+  --surface: #292030;
+  --surface-2: #322638;
+  --ink: #FBEFF2;
+  --ink-2: #D5C2CC;
+  --ink-3: #A18E9A;
+  --line: #3E3140;
+
+  --pink: #FF9FBF;
+  --pink-soft: #432333;
+  --pink-ink: #FFC4D7;
+
+  --peach: #FFB98A;
+  --peach-soft: #432A1E;
+  --peach-ink: #FFD3B4;
+
+  --mint: #8FE4CE;
+  --mint-soft: #1B3833;
+  --mint-ink: #BFF3E6;
+
+  --lav: #C3B4FA;
+  --lav-soft: #2E2650;
+  --lav-ink: #DED3FF;
+
+  --sky: #9ED1F7;
+  --sky-soft: #1C3145;
+  --sky-ink: #C9E6FF;
+
+  --butter: #FFE18E;
+  --butter-soft: #3E331A;
+  --butter-ink: #FFEDB8;
+
+  --night: #17111A;
+  --night-2: #241A27;
+  --night-ink: #FFF7F3;
+  --night-ink-2: #D5BCC7;
+
+  --good: #7FE0B7;
+  --good-soft: #17342A;
+
+  --shadow: 0 2px 4px rgba(0,0,0,.35), 0 18px 40px -22px rgba(0,0,0,.9);
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 74px; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(520px 300px at 100% -40px, color-mix(in srgb, var(--pink) 18%, transparent), transparent 70%),
+    radial-gradient(460px 280px at 0% 0%, color-mix(in srgb, var(--butter) 28%, transparent), transparent 72%),
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 3rem;
+  -webkit-font-smoothing: antialiased;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+.wrap { max-width: var(--max); margin-inline: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ── Header ── */
+.site-head {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
+  padding-inline: max(16px, env(safe-area-inset-left, 0px));
+}
+.site-head .bar { max-width: var(--max); margin-inline: auto; display: flex; align-items: center; gap: .7rem; padding-block: .55rem; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: .5rem; font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; color: var(--ink); text-decoration: none; }
+.brand .logo { width: 32px; height: 32px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #FFF 0 12%, var(--pink) 40%, var(--lav) 100%); flex: none; box-shadow: 0 4px 12px -6px var(--pink); }
+.head-nav { display: flex; gap: .1rem; margin-inline-start: auto; flex-wrap: wrap; }
+.head-nav a { color: var(--ink-2); text-decoration: none; font-family: var(--font-ui); font-size: .87rem; font-weight: 600; padding: .3rem .58rem; border-radius: 999px; }
+.head-nav a:hover, .head-nav a:focus-visible { background: var(--surface-2); color: var(--ink); }
+.theme-btn { border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 1rem; display: grid; place-items: center; flex: none; }
+.theme-btn:hover { color: var(--ink); }
+:focus-visible { outline: 2px solid var(--lav); outline-offset: 2px; border-radius: 10px; }
+
+/* ── Hero ── */
+.hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(1.2rem, 4vw, 2.6rem); align-items: center; padding-block: clamp(1.5rem, 4vw, 2.6rem) clamp(.8rem, 2vw, 1.4rem); }
+.hello { font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; color: var(--pink-ink); margin: 0 0 .4rem; display: flex; align-items: center; gap: .4rem; flex-wrap: wrap; }
+.heart { display: inline-block; color: var(--pink); animation: beat 2.6s ease-in-out infinite; }
+@keyframes beat { 0%,100% { transform: scale(1); } 12% { transform: scale(1.18); } 24% { transform: scale(1); } }
+h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 4.2vw, 2.85rem); line-height: 1.2; margin: 0 0 .7rem; text-wrap: balance; letter-spacing: -.01em; }
+h1 .hl { color: var(--pink-ink); background: linear-gradient(transparent 62%, var(--pink-soft) 62%); padding: 0 .1em; border-radius: 6px; }
+.lede { font-size: 1.02rem; color: var(--ink-2); max-width: 48ch; margin: 0 0 1.1rem; }
+.lede b { color: var(--ink); font-weight: 600; }
+.hero-cta { display: flex; gap: .55rem; flex-wrap: wrap; }
+.btn { font-family: var(--font-ui); font-size: .93rem; font-weight: 700; cursor: pointer; border-radius: 999px; padding: .6rem 1.15rem; border: 1px solid transparent; text-decoration: none; display: inline-flex; align-items: center; gap: .35rem; transition: transform .15s, filter .15s; }
+.btn:hover { transform: translateY(-1px); filter: brightness(1.03); }
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--pink); color: #4A1228; }
+.btn-lav { background: var(--lav); color: #25175C; }
+.btn-ghost { background: var(--surface); color: var(--ink); border-color: var(--line); }
+.btn-ghost:hover { background: var(--surface-2); }
+.btn-sm { font-size: .84rem; padding: .36rem .85rem; }
+
+/* Dad's note */
+.dad-card {
+  background: linear-gradient(160deg, var(--night-2), var(--night));
+  color: var(--night-ink); border-radius: var(--r-lg); padding: 1.3rem 1.3rem 1.1rem;
+  box-shadow: var(--shadow); position: relative; overflow: hidden;
+}
+.dad-card::before {
+  content: ""; position: absolute; inset-inline-end: -50px; inset-block-start: -50px; width: 170px; height: 170px; border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--pink) 55%, transparent), transparent 70%);
+}
+.dad-head { display: flex; align-items: center; gap: .55rem; position: relative; z-index: 1; }
+.dad-head .seal { width: 34px; height: 34px; border-radius: 50%; background: var(--pink); color: #4A1228; display: grid; place-items: center; font-size: 1rem; flex: none; }
+.dad-head b { font-family: var(--font-display); font-size: .95rem; }
+.dad-head span { margin-inline-start: auto; font-family: var(--font-ui); font-size: .72rem; color: var(--night-ink-2); background: rgba(255,255,255,.08); padding: .12rem .6rem; border-radius: 999px; }
+.dad-quote { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.05rem, 2.2vw, 1.3rem); line-height: 1.55; margin: .7rem 0 .25rem; position: relative; z-index: 1; text-wrap: balance; }
+.dad-src { font-family: var(--font-ui); font-size: .78rem; color: var(--night-ink-2); margin: 0 0 .8rem; position: relative; z-index: 1; }
+.dad-card .btn-ghost { background: rgba(255,255,255,.1); border-color: transparent; color: var(--night-ink); position: relative; z-index: 1; }
+.dad-card .btn-ghost:hover { background: rgba(255,255,255,.18); }
+
+/* Michal's card */
+.michal-note { background: linear-gradient(150deg, var(--pink-soft), var(--surface) 60%); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 1rem 1.15rem; display: flex; flex-direction: column; gap: .55rem; box-shadow: var(--shadow); }
+.michal-head { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+.michal-head .avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--pink); color: #4A1228; display: grid; place-items: center; font-size: 1.1rem; flex: none; }
+.michal-head b { font-family: var(--font-display); font-size: 1rem; display: block; line-height: 1.2; }
+.michal-head span { font-family: var(--font-ui); font-size: .78rem; color: var(--ink-3); }
+.michal-head .michal-tag { margin-inline-start: auto; font-family: var(--font-ui); font-size: .74rem; font-weight: 700; color: var(--pink-ink); background: var(--surface); border: 1px solid var(--line); padding: .12rem .65rem; border-radius: 999px; }
+.michal-say { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; line-height: 1.55; color: var(--ink); }
+.dad-form { display: flex; flex-direction: column; gap: .4rem; position: relative; z-index: 1; }
+.dad-form .field { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.18); color: var(--night-ink); }
+.dad-form .field::placeholder { color: var(--night-ink-2); }
+.dad-btns { display: flex; gap: .35rem; flex-wrap: wrap; }
+.dad-card .btn-primary { background: var(--pink); color: #4A1228; }
+.dad-list { margin-top: .55rem; position: relative; z-index: 1; }
+.dad-list .phrase-item { background: rgba(255,255,255,.1); color: var(--night-ink); }
+.dad-list .row-del { color: var(--night-ink-2); }
+.dad-empty { font-family: var(--font-ui); font-size: .76rem; color: var(--night-ink-2); margin: .4rem 0 0; position: relative; z-index: 1; }
+.michal-form { display: flex; gap: .35rem; align-items: center; flex-wrap: wrap; }
+.michal-form .field { flex: 1 1 170px; min-width: 0; --c: var(--pink); }
+.michal-today { font-family: var(--font-ui); font-size: .76rem; color: var(--ink-3); }
+.michal-today b { color: var(--pink-ink); }
+.phrase-box { background: color-mix(in srgb, var(--surface) 80%, transparent); border: 1px solid var(--line); border-radius: var(--r-sm); padding: .7rem .8rem; display: flex; flex-direction: column; gap: .45rem; }
+.phrase-box-title { font-family: var(--font-ui); font-size: .8rem; font-weight: 700; color: var(--pink-ink); }
+.phrase-form { display: flex; gap: .35rem; align-items: center; flex-wrap: wrap; }
+.phrase-form .field { flex: 1 1 150px; min-width: 0; --c: var(--pink); }
+.phrase-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .3rem; }
+.phrase-item { display: flex; align-items: center; gap: .2rem; background: var(--pink-soft); border-radius: 999px; padding: .12rem .5rem .12rem .7rem; font-size: .84rem; color: var(--ink); max-width: 100%; }
+.phrase-text { overflow-wrap: anywhere; }
+.phrase-item .row-del { font-size: .85rem; }
+
+/* Signature */
+.credit { border-top: 1px solid var(--line); margin-top: 1.6rem; padding-top: 1.1rem; display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
+.credit .badge-m { width: 42px; height: 42px; border-radius: 50%; background: var(--pink); color: #4A1228; display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; flex: none; }
+.credit p { margin: 0; font-family: var(--font-ui); font-size: .88rem; color: var(--ink-2); }
+.credit p b { color: var(--ink); }
+
+/* Pulse mini */
+.pulse-mini { display: flex; align-items: center; gap: .9rem; margin-top: 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); padding: .7rem .9rem; box-shadow: var(--shadow); }
+.pulse-mini svg { flex: none; }
+.pulse-mini .num { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; line-height: 1; }
+.pulse-mini .lbl { font-family: var(--font-ui); font-size: .74rem; color: var(--ink-3); }
+.pulse-mini .sliders { display: grid; grid-template-columns: 1fr 1fr; gap: .3rem .8rem; flex: 1; min-width: 0; }
+.pulse-mini label { font-family: var(--font-ui); font-size: .72rem; color: var(--ink-2); display: flex; flex-direction: column; gap: .15rem; }
+.pulse-mini input[type=range] { width: 100%; accent-color: var(--pink); }
+
+/* ── Sections ── */
+section { padding-block: clamp(1rem, 2.5vw, 1.7rem); }
+.sec-head { display: flex; align-items: center; gap: .7rem; justify-content: space-between; flex-wrap: wrap; margin-bottom: .9rem; }
+.sec-title { display: flex; align-items: center; gap: .55rem; margin: 0; }
+h2 { font-family: var(--font-display); font-size: clamp(1.2rem, 2.3vw, 1.5rem); font-weight: 800; margin: 0; }
+.sec-sub { color: var(--ink-3); font-size: .84rem; margin: 0; font-family: var(--font-ui); }
+
+/* ── Mood ── */
+.moods { display: flex; flex-wrap: wrap; gap: .4rem; }
+.mood { cursor: pointer; font-family: var(--font-ui); font-size: .88rem; font-weight: 600; border: 1px solid var(--line); background: var(--bg); color: var(--ink-2); border-radius: 999px; padding: .34rem .8rem; transition: all .15s; }
+.mood:hover { border-color: var(--pink); color: var(--ink); transform: translateY(-1px); }
+.mood[aria-pressed="true"] { background: var(--pink); border-color: var(--pink); color: #4A1228; }
+.mood-out { margin-top: .45rem; background: var(--surface-2); border-radius: var(--r-sm); padding: .8rem 1rem; min-height: 4.6rem; display: flex; flex-direction: column; gap: .2rem; justify-content: center; }
+.mood-out .pick { font-family: var(--font-display); font-weight: 700; font-size: .98rem; color: var(--pink-ink); }
+.mood-out .line { font-size: .9rem; color: var(--ink-2); }
+.mood-out .invite { font-size: .8rem; color: var(--ink-3); font-family: var(--font-ui); }
+
+/* ── Cards & squares ── */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); padding: 1rem 1.05rem; box-shadow: var(--shadow); min-width: 0; }
+.squares { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .9rem; }
+.square { display: flex; flex-direction: column; gap: .5rem; --c: var(--lav); --c-soft: var(--lav-soft); --c-ink: var(--lav-ink); }
+.sq-head { display: flex; align-items: center; gap: .6rem; }
+.sq-icon { width: 38px; height: 38px; border-radius: 14px; background: var(--c-soft); color: var(--c-ink); display: grid; place-items: center; flex: none; font-size: 1.05rem; }
+.sq-head h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin: 0; line-height: 1.25; }
+.sq-head p { margin: 0; font-size: .78rem; color: var(--ink-3); font-family: var(--font-ui); }
+.sq-count { margin-inline-start: auto; font-family: var(--font-display); font-weight: 800; font-size: .88rem; color: var(--c-ink); background: var(--c-soft); border-radius: 999px; padding: .02rem .55rem; flex: none; font-variant-numeric: tabular-nums; }
+.entry-form { display: flex; gap: .35rem; align-items: center; }
+.entry-form .grow { flex: 1 1 0; min-width: 0; }
+.field, .select, textarea {
+  font-family: var(--font-body); font-size: .92rem; color: var(--ink);
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--r-sm);
+  padding: .48rem .7rem; width: 100%;
+}
+.field::placeholder, textarea::placeholder { color: var(--ink-3); }
+.field:focus, .select:focus, textarea:focus { background: var(--surface); border-color: var(--c, var(--lav)); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--c, var(--lav)) 20%, transparent); }
+textarea { resize: vertical; line-height: 1.6; }
+.add-btn { width: 34px; height: 34px; border-radius: 50%; border: 0; background: var(--c); color: var(--c-ink); font-size: 1.1rem; font-weight: 800; cursor: pointer; flex: none; display: grid; place-items: center; line-height: 1; }
+.add-btn:hover { filter: brightness(.96); }
+.entry-list { list-style: none; margin: .1rem 0 0; padding: 0; display: flex; flex-direction: column; gap: .3rem; max-height: 15rem; overflow-y: auto; }
+.entry { display: flex; align-items: flex-start; gap: .5rem; background: var(--c-soft); border-radius: var(--r-sm); padding: .42rem .6rem; font-size: .9rem; }
+.entry.done .entry-text { text-decoration: line-through; opacity: .6; }
+.entry-text { flex: 1; min-width: 0; overflow-wrap: anywhere; color: var(--ink); }
+.entry time { font-family: var(--font-ui); font-size: .68rem; color: var(--ink-3); flex: none; padding-top: .15rem; }
+.entry input[type=checkbox] { width: 17px; height: 17px; accent-color: var(--c); flex: none; margin-top: .2rem; cursor: pointer; }
+.row-del { border: 0; background: transparent; color: var(--ink-3); cursor: pointer; font-size: 1rem; line-height: 1; padding: .05rem .22rem; border-radius: 6px; flex: none; }
+.row-del:hover { color: var(--pink-ink); }
+.empty { color: var(--ink-3); font-size: .84rem; padding: .25rem 0; margin: 0; font-family: var(--font-ui); }
+
+/* ── Daily card ── */
+.daily {
+  background: linear-gradient(150deg, var(--pink-soft), var(--butter-soft) 60%, var(--surface));
+  border: 1px solid var(--line); border-radius: var(--r-lg); padding: clamp(1.05rem, 3vw, 1.5rem);
+  display: grid; grid-template-columns: 1fr; align-items: stretch; gap: .65rem; position: relative; overflow: hidden;
+}
+.daily-top { display: flex; align-items: center; gap: .85rem; }
+.daily .big-emoji { width: 56px; height: 56px; border-radius: 50%; background: var(--surface); color: var(--pink); display: grid; place-items: center; font-size: 1.55rem; flex: none; box-shadow: var(--shadow); }
+.daily .today-text {
+  font-family: var(--font-display); font-size: 1.05rem; line-height: 1.75; font-weight: 500;
+  background: color-mix(in srgb, var(--surface) 80%, transparent); border-radius: var(--r-sm);
+  padding: .75rem .9rem; min-height: 5.2rem; --c: var(--pink);
+}
+.daily-foot { display: flex; justify-content: space-between; gap: .6rem; flex-wrap: wrap; font-family: var(--font-ui); font-size: .76rem; color: var(--ink-3); }
+.today-flag { font-family: var(--font-ui); font-size: .76rem; color: var(--good); min-height: 1em; }
+.daily-tools { display: flex; gap: .35rem; flex-wrap: wrap; align-items: center; }
+.daily-inspire {
+  display: flex; gap: .7rem; align-items: flex-start; margin-top: .3rem;
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  border: 1px dashed color-mix(in srgb, var(--pink) 45%, var(--line));
+  border-radius: var(--r-sm); padding: .7rem .85rem;
+}
+.inspire-mark { color: var(--pink); font-size: 1.1rem; line-height: 1.4; flex: none; }
+.inspire-kicker { font-family: var(--font-ui); font-size: .7rem; font-weight: 700; letter-spacing: .06em; color: var(--pink-ink); text-transform: uppercase; }
+.inspire-text { font-family: var(--font-display); font-size: 1rem; font-weight: 700; line-height: 1.5; margin: .1rem 0 0; }
+.inspire-side { font-family: var(--font-ui); font-size: .79rem; color: var(--ink-2); }
+.daily .kicker { font-family: var(--font-ui); font-size: .74rem; font-weight: 700; letter-spacing: .05em; color: var(--pink-ink); text-transform: uppercase; }
+.daily .main { font-family: var(--font-display); font-size: clamp(1.02rem, 2vw, 1.3rem); font-weight: 700; line-height: 1.45; margin: .15rem 0 0; text-wrap: balance; }
+.daily .side { font-size: .83rem; color: var(--ink-2); margin: .2rem 0 0; font-family: var(--font-ui); }
+
+/* ── Journal ── */
+.level-switch { display: inline-flex; background: var(--surface-2); border-radius: 999px; padding: .2rem; gap: .1rem; flex-wrap: wrap; }
+.level-switch button { border: 0; background: transparent; font-family: var(--font-ui); font-size: .85rem; font-weight: 700; color: var(--ink-2); padding: .3rem .8rem; border-radius: 999px; cursor: pointer; }
+.level-switch button[aria-selected="true"] { background: var(--surface); color: var(--pink-ink); box-shadow: 0 2px 8px -5px rgba(0,0,0,.25); }
+.jgrid { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+.jpanel { display: flex; flex-direction: column; gap: .45rem; }
+.jpanel h3 { margin: 0; font-family: var(--font-display); font-size: 1.05rem; display: flex; align-items: center; gap: .45rem; flex-wrap: wrap; }
+.jnum { font-family: var(--font-ui); font-size: .72rem; font-weight: 700; color: var(--ink-2); background: var(--surface-2); padding: .1rem .55rem; border-radius: 999px; }
+.jsub { font-family: var(--font-ui); font-size: .78rem; font-weight: 700; color: var(--ink-2); margin-top: .15rem; }
+.jpanel textarea { min-height: 4.8rem; }
+.saved { font-family: var(--font-ui); font-size: .8rem; color: var(--good); min-height: 1.1em; }
+.archive { display: flex; flex-direction: column; gap: .45rem; }
+.archive-item { border: 1px solid var(--line); border-radius: var(--r-sm); padding: .55rem .75rem; background: var(--surface-2); }
+.archive-item summary { cursor: pointer; font-family: var(--font-ui); font-weight: 700; font-size: .88rem; list-style: none; }
+.archive-item summary::-webkit-details-marker { display: none; }
+.archive-item summary::before { content: "♡ "; color: var(--pink); }
+.archive-item[open] summary::before { content: "♥ "; }
+.archive-body { margin-top: .45rem; display: flex; flex-direction: column; gap: .35rem; }
+.pill-list { display: flex; flex-wrap: wrap; gap: .3rem; }
+.pill { font-size: .8rem; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: .06rem .6rem; color: var(--ink-2); overflow-wrap: anywhere; }
+.pill.done { text-decoration: line-through; opacity: .6; }
+
+/* ── Tools ── */
+.tools { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .9rem; }
+.tool { display: flex; flex-direction: column; gap: .45rem; }
+.tool h3 { margin: 0; font-family: var(--font-display); font-size: 1.02rem; }
+.hint { font-size: .79rem; color: var(--ink-3); margin: 0; font-family: var(--font-ui); }
+.timer-face { font-family: var(--font-display); font-weight: 800; font-size: 2.45rem; text-align: center; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.chips { display: flex; gap: .3rem; justify-content: center; flex-wrap: wrap; }
+.chip { cursor: pointer; border: 1px solid var(--line); background: var(--surface-2); color: var(--ink-2); font-family: var(--font-ui); font-size: .8rem; font-weight: 700; border-radius: 999px; padding: .16rem .65rem; }
+.chip[aria-pressed="true"] { background: var(--mint); border-color: var(--mint); color: #0B3A2E; }
+.timer-btns { display: flex; gap: .35rem; justify-content: center; flex-wrap: wrap; }
+.status { text-align: center; font-size: .82rem; color: var(--good); font-weight: 700; min-height: 1.2em; margin: 0; font-family: var(--font-ui); }
+.breath-wrap { display: grid; place-items: center; }
+.breath-wrap text { font-family: var(--font-display); font-weight: 800; }
+.breath-wrap circle { transition: stroke-dashoffset 1s linear; }
+.reminders { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .6rem; margin-top: .25rem; }
+.sticky-note { border-radius: 18px; padding: .7rem .85rem 1.6rem; font-size: .9rem; line-height: 1.5; position: relative; min-height: 94px; overflow-wrap: anywhere; white-space: pre-wrap; background: var(--note-bg); color: var(--note-ink); }
+.sticky-note time { position: absolute; inset-block-end: .4rem; inset-inline-start: .85rem; font-family: var(--font-ui); font-size: .68rem; opacity: .8; }
+.sticky-note .row-del { position: absolute; inset-block-start: .2rem; inset-inline-end: .3rem; color: inherit; opacity: .65; }
+.sticky-note .row-del:hover { opacity: 1; color: inherit; }
+.ambient { display: flex; gap: .3rem; flex-wrap: wrap; }
+.ambient button { cursor: pointer; font-family: var(--font-ui); font-size: .82rem; font-weight: 600; border: 1px solid var(--line); background: var(--surface-2); color: var(--ink-2); border-radius: 999px; padding: .28rem .72rem; }
+.ambient button[aria-pressed="true"] { background: var(--mint-soft); border-color: var(--mint); color: var(--mint-ink); }
+.volume { display: flex; flex-direction: column; gap: .15rem; font-size: .76rem; color: var(--ink-3); font-family: var(--font-ui); }
+.volume input { accent-color: var(--mint); width: 100%; }
+.side-stats { display: flex; flex-direction: column; gap: .3rem; background: var(--surface-2); border-radius: var(--r-sm); padding: .7rem .85rem; }
+.side-stats h3 { margin: 0 0 .15rem; font-family: var(--font-display); font-size: .95rem; }
+.side-stats .stat { display: flex; justify-content: space-between; font-size: .84rem; color: var(--ink-2); font-family: var(--font-ui); }
+.side-stats .stat b { font-family: var(--font-display); color: var(--ink); font-variant-numeric: tabular-nums; }
+
+/* ── Notebook ── */
+.note-entry { border: 1px solid var(--line); border-radius: var(--r-sm); padding: .5rem .7rem; background: var(--surface-2); }
+.note-entry summary { cursor: pointer; font-family: var(--font-ui); font-weight: 700; font-size: .88rem; display: flex; gap: .4rem; align-items: center; }
+.note-entry summary .kind { font-size: .68rem; font-weight: 700; padding: .04rem .45rem; border-radius: 999px; background: var(--k-soft); color: var(--k-ink); flex: none; }
+.note-entry .preview, .note-entry .full { white-space: pre-wrap; font-size: .87rem; color: var(--ink-2); margin: .35rem 0 0; overflow-wrap: anywhere; }
+.note-entry .actions { display: flex; gap: .3rem; flex-wrap: wrap; margin-top: .4rem; }
+
+/* ── Footer ── */
+footer { border-top: 1px solid var(--line); margin-top: 1.4rem; padding-top: 1rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: .8rem; color: var(--ink-3); font-family: var(--font-ui); }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .jgrid, .tools { grid-template-columns: 1fr; }
+  .head-nav { display: none; }
+}
+@media (max-width: 620px) {
+  .squares { grid-template-columns: 1fr; }
+  .pulse-mini .sliders { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="bar">
+    <a class="brand" href="#top"><span class="logo" aria-hidden="true"></span>פינה של אסתי</a>
+    <nav class="head-nav" aria-label="ניווט ראשי">
+      <a href="#mood">איך את?</a>
+      <a href="#squares">הריבועים</a>
+      <a href="#journal">יומן</a>
+      <a href="#tools">כלים</a>
+      <a href="#notes">מחברת</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="מעבר בין מצב בהיר לכהה">◐</button>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <section class="hero" aria-labelledby="heroTitle">
+    <div>
+      <p class="hello"><span class="heart" aria-hidden="true">♥</span> שלום אסתי<span id="helloDate"></span></p>
+      <h1 id="heroTitle">כל מה שבלב, <span class="hl">במקום חם אחד</span></h1>
+      <p class="lede">
+        פינה קטנה שמחכה לך בסוף יום — <b>תובנות, מטרות, פתקים יומיים</b>, יומן עם מעקב
+        ומקום לשירים. ומדי פעם, מילה חמה מלמעלה שתזכירי: את אף פעם לא לבד.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#squares">לריבועים שלי ♥</a>
+        <a class="btn btn-lav" href="#journal">ליומן</a>
+      </div>
+
+      <div class="pulse-mini" aria-label="מד עומסי הראש">
+        <svg width="54" height="54" viewBox="0 0 54 54" aria-hidden="true">
+          <circle cx="27" cy="27" r="22" fill="none" stroke="var(--line)" stroke-width="6"></circle>
+          <circle id="dialFill" cx="27" cy="27" r="22" fill="none" stroke="var(--pink)" stroke-width="6" stroke-linecap="round" transform="rotate(-90 27 27)"></circle>
+          <text id="dialNum" x="27" y="32" text-anchor="middle" font-size="14" font-weight="800" font-family="Rubik, sans-serif" fill="var(--ink)">50</text>
+        </svg>
+        <div class="sliders">
+          <label>עומס<input type="range" id="loadRange" min="0" max="100" value="70"></label>
+          <label>מרווח<input type="range" id="spaceRange" min="0" max="100" value="20"></label>
+        </div>
+        <div>
+          <div class="num" id="dialLabel">אמצע</div>
+          <div class="lbl">מד הראש</div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="dad-card" aria-labelledby="dadTitle">
+      <div class="dad-head">
+        <span class="seal" aria-hidden="true">♥</span>
+        <b id="dadTitle">מילים של חיזוק</b>
+        <span id="dadTick">המשפטים שלך, בסיבוב</span>
+      </div>
+      <p class="dad-quote" id="dadQuote">מיכל אוהבת אותך ♥</p>
+      <div class="dad-form">
+        <label class="sr-only" for="dadIn">משפט חיזוק חדש</label>
+        <input class="field" id="dadIn" type="text" maxlength="160" autocomplete="off" placeholder="הוסיפי משפט חיזוק…">
+        <div class="dad-btns">
+          <button class="btn btn-primary btn-sm" type="button" id="dadSave">הוספה לסיבוב</button>
+          <button class="btn btn-ghost btn-sm" type="button" id="dadNext">עוד אחת ♥</button>
+        </div>
+      </div>
+      <ul class="phrase-list dad-list" id="dadList"></ul>
+      <p class="dad-empty" id="dadEmpty">עוד אין משפטים. הראשון יכול להיות "מיכל אוהבת אותך ♥".</p>
+    </aside>
+
+    <div class="michal-note" id="michalCard" style="grid-column: 1 / -1;" aria-labelledby="michalTitle">
+      <div class="michal-head">
+        <span class="avatar" aria-hidden="true">♡</span>
+        <div>
+          <b id="michalTitle">מיכל</b>
+          <span>החברה שתכננה לך את הפינה הזו</span>
+        </div>
+        <span class="michal-tag">מיכל אוהבת אותך</span>
+      </div>
+      <div class="michal-say" id="michalSay" aria-live="polite">מיכל אוהבת אותך ♥</div>
+      <div class="phrase-box">
+        <label class="phrase-box-title" for="phraseIn">המשפטים של מיכל — שמורים ומתחלפים</label>
+        <form class="phrase-form" id="phraseForm">
+          <input class="field" id="phraseIn" type="text" maxlength="160" autocomplete="off" placeholder="הוסיפו משפט לסיבוב…">
+          <button class="btn btn-primary btn-sm" type="submit">הוספה</button>
+        </form>
+        <ul class="phrase-list" id="phraseList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOOD -->
+  <section id="mood" aria-labelledby="moodTitle">
+    <div class="sec-head">
+      <h2 id="moodTitle">איך את עכשיו?</h2>
+      <p class="sec-sub">בחרי תחושה — וקבלי התאמה קטנה להמשך הדף</p>
+    </div>
+    <div class="card">
+      <div class="moods" id="moodBtns" role="group" aria-label="מצב רוח">
+        <button class="mood" type="button" data-mood="calm" aria-pressed="true">רגועה ושלווה 🌿</button>
+        <button class="mood" type="button" data-mood="tired" aria-pressed="false">עייפה ומרוקנת 🌙</button>
+        <button class="mood" type="button" data-mood="overwhelmed" aria-pressed="false">עמוסה במחשבות ☁️</button>
+        <button class="mood" type="button" data-mood="hopeful" aria-pressed="false">מלאת תקווה ✨</button>
+        <button class="mood" type="button" data-mood="grateful" aria-pressed="false">מודה ושמחה 🌷</button>
+      </div>
+      <div class="mood-out" id="moodOut" aria-live="polite">
+        <div class="pick">רגע של שקט ושלווה</div>
+        <div class="line">זה זמן טוב לכתוב תובנה קטנה או פשוט לנשום עמוק.</div>
+        <div class="invite">המלצה: קפצי לריבוע התובנות או לפתק היומי.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SQUARES -->
+  <section id="squares" aria-labelledby="sqTitle">
+    <div class="sec-head">
+      <h2 id="sqTitle">הריבועים שלי</h2>
+      <p class="sec-sub">הכול נשמר אוטומטית אצלך בדפדפן</p>
+    </div>
+    <div class="squares">
+      <article class="card square" style="--c: var(--pink); --c-soft: var(--pink-soft); --c-ink: var(--pink-ink);">
+        <div class="sq-head">
+          <div class="sq-icon" aria-hidden="true">💡</div>
+          <div>
+            <h3>תובנות ונקודות אור</h3>
+            <p>משהו שלמדת או שהאיר לך את היום</p>
+          </div>
+          <span class="sq-count" id="cnt-insights">0</span>
+        </div>
+        <form class="entry-form" data-list="insights">
+          <input class="field grow" type="text" maxlength="200" placeholder="הוסיפי תובנה חדשה…" required>
+          <button class="add-btn" type="submit" aria-label="הוספה">+</button>
+        </form>
+        <ul class="entry-list" id="list-insights"></ul>
+      </article>
+
+      <article class="card square" style="--c: var(--mint); --c-soft: var(--mint-soft); --c-ink: var(--mint-ink);">
+        <div class="sq-head">
+          <div class="sq-icon" aria-hidden="true">🎯</div>
+          <div>
+            <h3>מטרות וצעדים קטנים</h3>
+            <p>צעד אחד בכל פעם</p>
+          </div>
+          <span class="sq-count" id="cnt-goals">0</span>
+        </div>
+        <form class="entry-form" data-list="goals">
+          <input class="field grow" type="text" maxlength="200" placeholder="מטרה קטנה להיום או לשבוע…" required>
+          <button class="add-btn" type="submit" aria-label="הוספה">+</button>
+        </form>
+        <ul class="entry-list" id="list-goals"></ul>
+      </article>
+
+      <article class="card square" style="--c: var(--lav); --c-soft: var(--lav-soft); --c-ink: var(--lav-ink);">
+        <div class="sq-head">
+          <div class="sq-icon" aria-hidden="true">🙏</div>
+          <div>
+            <h3>תודות קטנות</h3>
+            <p>דברים טובים ששווה לזכור</p>
+          </div>
+          <span class="sq-count" id="cnt-thanks">0</span>
+        </div>
+        <form class="entry-form" data-list="thanks">
+          <input class="field grow" type="text" maxlength="200" placeholder="על מה את מודה היום?" required>
+          <button class="add-btn" type="submit" aria-label="הוספה">+</button>
+        </form>
+        <ul class="entry-list" id="list-thanks"></ul>
+      </article>
+
+      <article class="card square" style="--c: var(--peach); --c-soft: var(--peach-soft); --c-ink: var(--peach-ink);">
+        <div class="sq-head">
+          <div class="sq-icon" aria-hidden="true">🌸</div>
+          <div>
+            <h3>פינוקים והפסקות</h3>
+            <p>דברים שעושים לך טוב בנשמה</p>
+          </div>
+          <span class="sq-count" id="cnt-treats">0</span>
+        </div>
+        <form class="entry-form" data-list="treats">
+          <input class="field grow" type="text" maxlength="200" placeholder="קפה חם, שיר אהוב, הליכה…" required>
+          <button class="add-btn" type="submit" aria-label="הוספה">+</button>
+        </form>
+        <ul class="entry-list" id="list-treats"></ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- DAILY NOTE -->
+  <section id="daily" aria-labelledby="dailyTitle">
+    <div class="daily">
+      <div class="daily-top">
+        <div class="big-emoji" aria-hidden="true">✉️</div>
+        <div>
+          <span class="kicker">הפתק היומי שלך</span>
+          <h2 id="dailyTitle">מחשבה חופשית להיום</h2>
+        </div>
+      </div>
+      <textarea class="today-text" id="todayNote" placeholder="כתבי כאן כל מה שעולה לך לראש היום… נשמר אוטומטית."></textarea>
+      <div class="daily-foot">
+        <span class="today-flag" id="todayFlag">נשמר אוטומטית</span>
+        <div class="daily-tools">
+          <button class="btn btn-ghost btn-sm" type="button" id="clearToday">ניקוי פתק</button>
+        </div>
+      </div>
+      <div class="daily-inspire">
+        <span class="inspire-mark" aria-hidden="true">✦</span>
+        <div>
+          <div class="inspire-kicker">השראה לדרך</div>
+          <div class="inspire-text" id="inspireQuote">גם צעד קטן קדימה הוא התקדמות אמיתית.</div>
+          <div class="inspire-side">תמיד בקצב שלך, בלי לחץ.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNAL -->
+  <section id="journal" aria-labelledby="journalTitle">
+    <div class="sec-head">
+      <h2 id="journalTitle">היומן שלי</h2>
+      <p class="sec-sub">סיכום יום ושמירה לארכיון</p>
+    </div>
+    <div class="jgrid">
+      <div class="card jpanel">
+        <h3>רשומה חדשה <span class="jnum" id="jDateTag">היום</span></h3>
+        <label class="jsub" for="jGood">מה היה טוב היום?</label>
+        <textarea id="jGood" placeholder="רגע אחד או יותר שחיממו את הלב…"></textarea>
+        <label class="jsub" for="jFree">מה יושב על הלב ורוצה לצאת?</label>
+        <textarea id="jFree" placeholder="מקום פתוח למחשבות, רגשות ותפילות…"></textarea>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:.5rem; flex-wrap:wrap;">
+          <span class="saved" id="jSaved"></span>
+          <button class="btn btn-primary btn-sm" type="button" id="jSaveBtn">שמירה לארכיון ♥</button>
+        </div>
+      </div>
+
+      <div class="card jpanel">
+        <h3>ארכיון ימים קודמים <span class="jnum" id="jCount">0</span></h3>
+        <div class="archive" id="jArchive">
+          <p class="empty">עוד אין רשומות בארכיון. שמרי את הרשומה הראשונה שלך!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section id="tools" aria-labelledby="toolsTitle">
+    <div class="sec-head">
+      <h2 id="toolsTitle">כלים לרוגע ולמיקוד</h2>
+      <p class="sec-sub">טיימר נשימה, מיקוד ופתקים דביקים</p>
+    </div>
+    <div class="tools">
+      <div class="card tool">
+        <h3>טיימר מיקוד ומנוחה</h3>
+        <p class="hint">בחרי משך זמן קצר לעבודה רגועה או להפסקה</p>
+        <div class="timer-face" id="timerFace">15:00</div>
+        <div class="chips" id="timerChips">
+          <button class="chip" type="button" data-min="5" aria-pressed="false">5 דק׳</button>
+          <button class="chip" type="button" data-min="15" aria-pressed="true">15 דק׳</button>
+          <button class="chip" type="button" data-min="25" aria-pressed="false">25 דק׳</button>
+        </div>
+        <div class="timer-btns">
+          <button class="btn btn-primary btn-sm" type="button" id="timerStart">התחלה</button>
+          <button class="btn btn-ghost btn-sm" type="button" id="timerReset">איפוס</button>
+        </div>
+        <p class="status" id="timerStatus"></p>
+      </div>
+
+      <div class="card tool">
+        <h3>דקה של נשימה רגועה</h3>
+        <p class="hint">שאיפה עמוקה (4 שניות), החזקה (4), נשיפה איטית (6)</p>
+        <div class="breath-wrap">
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="48" fill="none" stroke="var(--line)" stroke-width="8"></circle>
+            <circle id="breathRing" cx="60" cy="60" r="48" fill="none" stroke="var(--mint)" stroke-width="8" stroke-linecap="round" stroke-dasharray="301.6" stroke-dashoffset="0" transform="rotate(-90 60 60)"></circle>
+            <text id="breathText" x="60" y="65" text-anchor="middle" font-size="15" fill="var(--ink)">מוכנה?</text>
+          </svg>
+        </div>
+        <div class="timer-btns">
+          <button class="btn btn-lav btn-sm" type="button" id="breathBtn">התחילי לנשום</button>
+        </div>
+      </div>
+
+      <div class="card tool" style="grid-column: 1 / -1;">
+        <h3>פתקים דביקים על הלוח</h3>
+        <form class="entry-form" id="stickyForm">
+          <input class="field grow" id="stickyIn" type="text" maxlength="180" placeholder="תזכורת מהירה, ציטוט או רעיון לפתק צבעוני…" required>
+          <button class="btn btn-primary btn-sm" type="submit">הדבקת פתק</button>
+        </form>
+        <div class="reminders" id="stickyGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTEBOOK -->
+  <section id="notes" aria-labelledby="notesTitle">
+    <div class="sec-head">
+      <h2 id="notesTitle">המחברת — שירים, תפילות וקטעים</h2>
+      <p class="sec-sub">מקום לשמור מילים שנוגעות בלב</p>
+    </div>
+    <div class="card" style="display:flex; flex-direction:column; gap:.65rem;">
+      <form id="noteForm" style="display:flex; flex-direction:column; gap:.5rem;">
+        <div style="display:flex; gap:.45rem; flex-wrap:wrap;">
+          <input class="field" id="noteTitle" type="text" maxlength="80" placeholder="כותרת לקטע או לשיר…" style="flex:2 1 200px;" required>
+          <select class="select" id="noteKind" style="flex:1 1 130px;">
+            <option value="שיר">שיר</option>
+            <option value="תפילה">תפילה</option>
+            <option value="מחשבה">מחשבה</option>
+            <option value="ציטוט">ציטוט</option>
+          </select>
+        </div>
+        <textarea id="noteBody" rows="4" placeholder="כתבי או הדביקי כאן את המילים…" required></textarea>
+        <div style="display:flex; justify-content:flex-end;">
+          <button class="btn btn-primary btn-sm" type="submit">שמירה במחברת ♥</button>
+        </div>
+      </form>
+      <div id="notesList" style="display:flex; flex-direction:column; gap:.45rem;"></div>
+    </div>
+  </section>
+
+  <div class="credit">
+    <div class="badge-m" aria-hidden="true">מ</div>
+    <p>נבנה באהבה גדולה עבור <b>אסתי</b> — פינה חמה שתמיד מחכה לך.</p>
+  </div>
+
+  <footer>
+    <span>פינה של אסתי ♥ כל הנתונים נשמרים מקומית אצלך במכשיר</span>
+    <span id="footDate"></span>
+  </footer>
+
+</main>
+
+<script>
+(function(){
+  const store = {
+    get(k, def){ try { const v = localStorage.getItem('esty_' + k); return v ? JSON.parse(v) : def; } catch { return def; } },
+    set(k, v){ try { localStorage.setItem('esty_' + k, JSON.stringify(v)); } catch {} }
+  };
+
+  // Date display
+  const now = new Date();
+  const hebDate = now.toLocaleDateString('he-IL', { weekday: 'long', day: 'numeric', month: 'long' });
+  const helloDate = document.getElementById('helloDate');
+  const footDate = document.getElementById('footDate');
+  const jDateTag = document.getElementById('jDateTag');
+  if(helloDate) helloDate.textContent = ' · ' + hebDate;
+  if(footDate) footDate.textContent = hebDate;
+  if(jDateTag) jDateTag.textContent = now.toLocaleDateString('he-IL');
+
+  // Theme toggle
+  const themeBtn = document.getElementById('themeBtn');
+  const savedTheme = store.get('theme', null);
+  if(savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+  themeBtn.addEventListener('click', () => {
+    const cur = document.documentElement.getAttribute('data-theme');
+    const next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    store.set('theme', next);
+  });
+
+  // Head load dial
+  const loadRange = document.getElementById('loadRange');
+  const spaceRange = document.getElementById('spaceRange');
+  const dialFill = document.getElementById('dialFill');
+  const dialNum = document.getElementById('dialNum');
+  const dialLabel = document.getElementById('dialLabel');
+  const circ = 2 * Math.PI * 22;
+  dialFill.style.strokeDasharray = circ;
+
+  function updateDial(){
+    const l = +loadRange.value, s = +spaceRange.value;
+    const score = Math.max(0, Math.min(100, Math.round((100 - l + s) / 2)));
+    dialNum.textContent = score;
+    dialFill.style.strokeDashoffset = circ * (1 - score / 100);
+    dialLabel.textContent = score >= 68 ? 'מרווח וטוב' : score >= 38 ? 'אמצע' : 'עמוס קצת';
+    store.set('dial', { l, s });
+  }
+  const savedDial = store.get('dial', { l: 45, s: 65 });
+  loadRange.value = savedDial.l;
+  spaceRange.value = savedDial.s;
+  loadRange.addEventListener('input', updateDial);
+  spaceRange.addEventListener('input', updateDial);
+  updateDial();
+
+  // Dad / Encouragement phrases
+  const defaultDad = [
+    'מיכל אוהבת אותך ♥',
+    'את חזקה יותר ממה שאת חושבת, ויש בך אור מיוחד.',
+    'מותר לעצור, לנשום, ולקחת את הזמן שלך.',
+    'כל צעד קטן שלך שווה המון.'
+  ];
+  let dadPhrases = store.get('dad_phrases', defaultDad);
+  let dadIdx = 0;
+  const dadQuote = document.getElementById('dadQuote');
+  const dadList = document.getElementById('dadList');
+  const dadEmpty = document.getElementById('dadEmpty');
+  const dadIn = document.getElementById('dadIn');
+
+  function renderDad(){
+    dadList.innerHTML = '';
+    dadEmpty.style.display = dadPhrases.length ? 'none' : 'block';
+    dadQuote.textContent = dadPhrases.length ? dadPhrases[dadIdx % dadPhrases.length] : 'מיכל אוהבת אותך ♥';
+    dadPhrases.forEach((txt, i) => {
+      const li = document.createElement('li');
+      li.className = 'phrase-item';
+      li.innerHTML = `<span class="phrase-text"></span><button class="row-del" type="button" aria-label="מחיקה">×</button>`;
+      li.querySelector('.phrase-text').textContent = txt;
+      li.querySelector('.row-del').addEventListener('click', () => {
+        dadPhrases.splice(i, 1);
+        store.set('dad_phrases', dadPhrases);
+        renderDad();
+      });
+      dadList.appendChild(li);
+    });
+  }
+  document.getElementById('dadSave').addEventListener('click', () => {
+    const v = dadIn.value.trim();
+    if(!v) return;
+    dadPhrases.unshift(v);
+    dadIdx = 0;
+    dadIn.value = '';
+    store.set('dad_phrases', dadPhrases);
+    renderDad();
+  });
+  document.getElementById('dadNext').addEventListener('click', () => {
+    if(!dadPhrases.length) return;
+    dadIdx = (dadIdx + 1) % dadPhrases.length;
+    dadQuote.textContent = dadPhrases[dadIdx];
+  });
+  renderDad();
+
+  // Michal's phrases
+  const defaultMichal = [
+    'מיכל אוהבת אותך ♥',
+    'תזכרי תמיד שיש מישהי שחושבת עלייך ושמחה בך.',
+    'את מתנה אמיתית לעולם!'
+  ];
+  let michalPhrases = store.get('michal_phrases', defaultMichal);
+  let mIdx = 0;
+  const michalSay = document.getElementById('michalSay');
+  const phraseList = document.getElementById('phraseList');
+  const phraseIn = document.getElementById('phraseIn');
+
+  function renderMichal(){
+    phraseList.innerHTML = '';
+    michalSay.textContent = michalPhrases.length ? michalPhrases[mIdx % michalPhrases.length] : 'מיכל אוהבת אותך ♥';
+    michalPhrases.forEach((txt, i) => {
+      const li = document.createElement('li');
+      li.className = 'phrase-item';
+      li.innerHTML = `<span class="phrase-text"></span><button class="row-del" type="button" aria-label="מחיקה">×</button>`;
+      li.querySelector('.phrase-text').textContent = txt;
+      li.querySelector('.row-del').addEventListener('click', () => {
+        michalPhrases.splice(i, 1);
+        store.set('michal_phrases', michalPhrases);
+        renderMichal();
+      });
+      phraseList.appendChild(li);
+    });
+  }
+  document.getElementById('phraseForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const v = phraseIn.value.trim();
+    if(!v) return;
+    michalPhrases.unshift(v);
+    mIdx = 0;
+    phraseIn.value = '';
+    store.set('michal_phrases', michalPhrases);
+    renderMichal();
+  });
+  setInterval(() => {
+    if(michalPhrases.length > 1){
+      mIdx = (mIdx + 1) % michalPhrases.length;
+      michalSay.textContent = michalPhrases[mIdx];
+    }
+  }, 9000);
+  renderMichal();
+
+  // Mood selector
+  const moodMap = {
+    calm: ['רגע של שקט ושלווה', 'זה זמן טוב לכתוב תובנה קטנה או פשוט לנשום עמוק.', 'המלצה: קפצי לריבוע התובנות או לפתק היומי.'],
+    tired: ['מותר לנוח ולהוריד הילוך', 'לא חייבים להספיק הכול היום. עצם זה שאת כאן זה כבר מספיק.', 'המלצה: נסי דקה של נשימה רגועה למטה או רשמי לעצמך פינוק קטן.'],
+    overwhelmed: ['עושים סדר במחשבות, אחת אחת', 'כשיש הרבה בראש, להוציא את זה החוצה אל הדף משחרר מקום.', 'המלצה: שפכי הכול לפתק היומי בלי לסנן.'],
+    hopeful: ['איזה יופי של אנרגיה!', 'כשהלב פתוח קדימה, זה הרגע לסמן צעד קטן שמרגש אותך.', 'המלצה: הוסיפי מטרה קטנה בריבוע המטרות.'],
+    grateful: ['לב מלא בהודיה הוא לב שמח', 'לעצור ולהודות על הטוב הקיים מכפיל את השמחה.', 'המלצה: כתבי תודה אחת בריבוע התודות הקטנות.']
+  };
+  document.querySelectorAll('#moodBtns .mood').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#moodBtns .mood').forEach(b => b.setAttribute('aria-pressed', 'false'));
+      btn.setAttribute('aria-pressed', 'true');
+      const [p, l, inv] = moodMap[btn.dataset.mood];
+      const out = document.getElementById('moodOut');
+      out.querySelector('.pick').textContent = p;
+      out.querySelector('.line').textContent = l;
+      out.querySelector('.invite').textContent = inv;
+    });
+  });
+
+  // 4 Squares lists
+  ['insights', 'goals', 'thanks', 'treats'].forEach(key => {
+    let items = store.get('sq_' + key, []);
+    const ul = document.getElementById('list-' + key);
+    const cnt = document.getElementById('cnt-' + key);
+    function render(){
+      ul.innerHTML = '';
+      cnt.textContent = items.length;
+      items.forEach((it, idx) => {
+        const li = document.createElement('li');
+        li.className = 'entry' + (it.done ? ' done' : '');
+        li.innerHTML = `<input type="checkbox" ${it.done ? 'checked' : ''} aria-label="סימון בוצע"><span class="entry-text"></span><time>${it.date || ''}</time><button class="row-del" type="button" aria-label="מחיקה">×</button>`;
+        li.querySelector('.entry-text').textContent = it.text;
+        li.querySelector('input').addEventListener('change', e => {
+          items[idx].done = e.target.checked;
+          store.set('sq_' + key, items);
+          render();
+        });
+        li.querySelector('.row-del').addEventListener('click', () => {
+          items.splice(idx, 1);
+          store.set('sq_' + key, items);
+          render();
+        });
+        ul.appendChild(li);
+      });
+    }
+    document.querySelector(`form[data-list="${key}"]`).addEventListener('submit', e => {
+      e.preventDefault();
+      const inp = e.target.querySelector('input');
+      const val = inp.value.trim();
+      if(!val) return;
+      items.unshift({ text: val, done: false, date: new Date().toLocaleDateString('he-IL', { day:'numeric', month:'numeric' }) });
+      inp.value = '';
+      store.set('sq_' + key, items);
+      render();
+    });
+    render();
+  });
+
+  // Daily note
+  const todayNote = document.getElementById('todayNote');
+  const todayFlag = document.getElementById('todayFlag');
+  todayNote.value = store.get('today_note', '');
+  todayNote.addEventListener('input', () => {
+    store.set('today_note', todayNote.value);
+    todayFlag.textContent = 'נשמר ✓';
+  });
+  document.getElementById('clearToday').addEventListener('click', () => {
+    todayNote.value = '';
+    store.set('today_note', '');
+    todayFlag.textContent = 'הפתק נוקה';
+  });
+
+  // Journal
+  let journal = store.get('journal', []);
+  const jGood = document.getElementById('jGood');
+  const jFree = document.getElementById('jFree');
+  const jArchive = document.getElementById('jArchive');
+  const jCount = document.getElementById('jCount');
+  const jSaved = document.getElementById('jSaved');
+
+  function renderJournal(){
+    jCount.textContent = journal.length;
+    if(!journal.length){
+      jArchive.innerHTML = '<p class="empty">עוד אין רשומות בארכיון. שמרי את הרשומה הראשונה שלך!</p>';
+      return;
+    }
+    jArchive.innerHTML = '';
+    journal.forEach((entry, i) => {
+      const det = document.createElement('details');
+      det.className = 'archive-item';
+      det.innerHTML = `<summary>${entry.date}</summary><div class="archive-body"><div class="pill-list"></div><p style="margin:0; font-size:.88rem; white-space:pre-wrap;"></p><button class="btn btn-ghost btn-sm" type="button" style="align-self:flex-start;">מחיקת רשומה</button></div>`;
+      if(entry.good){
+        const span = document.createElement('span');
+        span.className = 'pill';
+        span.textContent = 'טוב: ' + entry.good;
+        det.querySelector('.pill-list').appendChild(span);
+      }
+      det.querySelector('p').textContent = entry.free || '';
+      det.querySelector('button').addEventListener('click', () => {
+        journal.splice(i, 1);
+        store.set('journal', journal);
+        renderJournal();
+      });
+      jArchive.appendChild(det);
+    });
+  }
+  document.getElementById('jSaveBtn').addEventListener('click', () => {
+    if(!jGood.value.trim() && !jFree.value.trim()) return;
+    journal.unshift({
+      date: new Date().toLocaleDateString('he-IL', { weekday:'short', day:'numeric', month:'long', hour:'2-digit', minute:'2-digit' }),
+      good: jGood.value.trim(),
+      free: jFree.value.trim()
+    });
+    jGood.value = '';
+    jFree.value = '';
+    store.set('journal', journal);
+    jSaved.textContent = 'נשמר בארכיון ♥';
+    renderJournal();
+  });
+  renderJournal();
+
+  // Focus timer
+  let totalSec = 15 * 60, leftSec = totalSec, tInt = null;
+  const timerFace = document.getElementById('timerFace');
+  const timerStatus = document.getElementById('timerStatus');
+  function fmtTimer(s){ return String(Math.floor(s/60)).padStart(2,'0') + ':' + String(s%60).padStart(2,'0'); }
+  document.querySelectorAll('#timerChips .chip').forEach(ch => {
+    ch.addEventListener('click', () => {
+      clearInterval(tInt); tInt = null;
+      document.querySelectorAll('#timerChips .chip').forEach(c => c.setAttribute('aria-pressed','false'));
+      ch.setAttribute('aria-pressed','true');
+      totalSec = +ch.dataset.min * 60;
+      leftSec = totalSec;
+      timerFace.textContent = fmtTimer(leftSec);
+      timerStatus.textContent = '';
+    });
+  });
+  document.getElementById('timerStart').addEventListener('click', () => {
+    if(tInt){ clearInterval(tInt); tInt = null; timerStatus.textContent = 'מושהה'; return; }
+    timerStatus.textContent = 'הזמן רץ בנחת…';
+    tInt = setInterval(() => {
+      leftSec--;
+      timerFace.textContent = fmtTimer(Math.max(0, leftSec));
+      if(leftSec <= 0){ clearInterval(tInt); tInt = null; timerStatus.textContent = 'כל הכבוד! הזמן הסתיים ♥'; }
+    }, 1000);
+  });
+  document.getElementById('timerReset').addEventListener('click', () => {
+    clearInterval(tInt); tInt = null;
+    leftSec = totalSec;
+    timerFace.textContent = fmtTimer(leftSec);
+    timerStatus.textContent = '';
+  });
+
+  // Breathing guide
+  let bInt = null;
+  const breathText = document.getElementById('breathText');
+  const breathRing = document.getElementById('breathRing');
+  const breathBtn = document.getElementById('breathBtn');
+  breathBtn.addEventListener('click', () => {
+    if(bInt){ clearInterval(bInt); bInt = null; breathText.textContent = 'מוכנה?'; breathRing.style.strokeDashoffset = 0; breathBtn.textContent = 'התחילי לנשום'; return; }
+    breathBtn.textContent = 'עצירה';
+    let sec = 0;
+    const cycle = () => {
+      const m = sec % 14;
+      if(m < 4){ breathText.textContent = 'שאיפה…'; breathRing.style.strokeDashoffset = 301.6 * (1 - (m+1)/4); }
+      else if(m < 8){ breathText.textContent = 'החזקה…'; breathRing.style.strokeDashoffset = 0; }
+      else { breathText.textContent = 'נשיפה…'; breathRing.style.strokeDashoffset = 301.6 * ((m-7)/6); }
+      sec++;
+    };
+    cycle();
+    bInt = setInterval(cycle, 1000);
+  });
+
+  // Sticky notes
+  const colors = [
+    ['var(--pink-soft)', 'var(--pink-ink)'],
+    ['var(--butter-soft)', 'var(--butter-ink)'],
+    ['var(--mint-soft)', 'var(--mint-ink)'],
+    ['var(--lav-soft)', 'var(--lav-ink)'],
+    ['var(--sky-soft)', 'var(--sky-ink)']
+  ];
+  let stickies = store.get('stickies', [{ text: 'זכרי לשתות כוס מים ולחייך לעצמך ♥', time: 'היום', c: 0 }]);
+  const stickyGrid = document.getElementById('stickyGrid');
+  function renderStickies(){
+    stickyGrid.innerHTML = '';
+    stickies.forEach((st, i) => {
+      const [bg, ink] = colors[st.c % colors.length];
+      const div = document.createElement('div');
+      div.className = 'sticky-note';
+      div.style.setProperty('--note-bg', bg);
+      div.style.setProperty('--note-ink', ink);
+      div.innerHTML = `<span></span><time>${st.time || ''}</time><button class="row-del" type="button" aria-label="מחיקה">×</button>`;
+      div.querySelector('span').textContent = st.text;
+      div.querySelector('.row-del').addEventListener('click', () => {
+        stickies.splice(i, 1);
+        store.set('stickies', stickies);
+        renderStickies();
+      });
+      stickyGrid.appendChild(div);
+    });
+  }
+  document.getElementById('stickyForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const inp = document.getElementById('stickyIn');
+    const v = inp.value.trim();
+    if(!v) return;
+    stickies.unshift({ text: v, time: new Date().toLocaleDateString('he-IL', { day:'numeric', month:'numeric' }), c: stickies.length });
+    inp.value = '';
+    store.set('stickies', stickies);
+    renderStickies();
+  });
+  renderStickies();
+
+  // Notebook
+  let notes = store.get('notebook', []);
+  const notesList = document.getElementById('notesList');
+  function renderNotes(){
+    notesList.innerHTML = '';
+    notes.forEach((n, i) => {
+      const det = document.createElement('details');
+      det.className = 'note-entry';
+      det.style.setProperty('--k-soft', 'var(--lav-soft)');
+      det.style.setProperty('--k-ink', 'var(--lav-ink)');
+      det.innerHTML = `<summary><span class="kind"></span><span class="ntitle"></span></summary><p class="full"></p><div class="actions"><button class="btn btn-ghost btn-sm" type="button">מחיקה</button></div>`;
+      det.querySelector('.kind').textContent = n.kind;
+      det.querySelector('.ntitle').textContent = n.title;
+      det.querySelector('.full').textContent = n.body;
+      det.querySelector('button').addEventListener('click', () => {
+        notes.splice(i, 1);
+        store.set('notebook', notes);
+        renderNotes();
+      });
+      notesList.appendChild(det);
+    });
+  }
+  document.getElementById('noteForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const title = document.getElementById('noteTitle');
+    const kind = document.getElementById('noteKind');
+    const body = document.getElementById('noteBody');
+    if(!title.value.trim() || !body.value.trim()) return;
+    notes.unshift({ title: title.value.trim(), kind: kind.value, body: body.value.trim() });
+    title.value = '';
+    body.value = '';
+    store.set('notebook', notes);
+    renderNotes();
+  });
+  renderNotes();
+})();
+</script>
+<input type='hidden' name='ntsp_block_page' value='https://safepage.etrog.net.il/?a=block/block1&level=5&url=http%3A%2F%2Fcontribution.usercontent.google.com%2Fdownload%3Fc%3DCgxiYXJkX3N0b3JhZ2USUBINcmVzcG9uc2VfZGF0YRo_CjA1NjI5Nzc3Njc3NDlkMGMxMDAwNjYwOTYyY2EwZmUyZjA0YTQ0NmUwYjkzOTA4YWESCxIHEOHg6sDCCRgB%26filename%3Dindex.html%26opi%3D103135050&user_id=356821&sigid=0420e7462f3b62f0701da24a9155721d09857f9deac492df49919806fa385cd6&startm=201511&keyword=&referer=https%3A%2F%2Fgemini.google.com%2F&category=66&cause=Quiltingjs'/><input type='hidden' name='nts_id' value='356821'/><input type='hidden' name='sigid' value='093ddce8b1df9870d88f5d08f84b0c23'/><script src='/jsQuilting/server/etAddOn.js?v=1&k=23898278c1850f536d688db3614128a0' type='text/javascript' defer></script></body>
+</html>
